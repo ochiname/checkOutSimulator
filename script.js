@@ -66,7 +66,7 @@ function rendering() {
         if (line.length > 0) {
             line.forEach(task => {
                 lineList.innerHTML += `<p><strong>(Customer Name:</strong> ${task.customer},---<strong> Number of Items:</strong> ${task.items})</p>`;
-                
+                console.log("task");
             });
         } else {
             lineList.innerHTML += `<p>No customers in this line yet.</p>`;
