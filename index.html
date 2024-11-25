@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout System</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .line {
+            margin-bottom: 20px;
+        }
+
+        .line h3 {
+            color: #333;
+        }
+
+        #taskForm {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #taskForm label {
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .taskList {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 45%;
+            margin-bottom: 15px;
+        }
+
+        .taskList p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Checkout Line System</h1>
+
+    <!-- Form to add new customer -->
+    <div id="taskForm">
+        <label for="item">Customer Name:</label>
+        <input type="text" id="item" placeholder="Enter customer name"><br><br>
+        
+        <label for="name">Number of Items (Max 15):</label>
+        <input type="number" id="name" placeholder="Enter number of items" max="15"><br><br>
+
+        <button onclick="createTask()">Add Customer</button>
+    </div>
+
+    <!-- Checkout Lines -->
+    <div class="container">
+        <div class="taskList" id="taskList1">
+            <h3>Checkout Line 1</h3>
+        </div>
+
+        <div class="taskList" id="taskList2">
+            <h3>Checkout Line 2</h3>
+        </div>
+
+        <div class="taskList" id="taskList3">
+            <h3>Checkout Line 3</h3>
+        </div>
+
+        <div class="taskList" id="taskList4">
+            <h3>Checkout Line 4</h3>
+        </div>
+
+        <div class="taskList" id="taskList5">
+            <h3>Checkout Line 5</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
