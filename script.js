@@ -33,7 +33,7 @@ function createTask() {
     // Validate inputs and ensure no more than 15 items
     if (userName !== '' && itemNumber !== '' && itemNumber <= 15) {
         const task = { customer: userName, items: parseInt(itemNumber) };
-        console.log(task);
+
         // Find the line with the fewest customers
         const shortestLine = checkOutLine.reduce(
             (minLine, currentLine) =>
@@ -63,10 +63,9 @@ function rendering() {
         lineList.innerHTML = `<h3>Checkout Line ${index + 1}</h3>`;
 
         // If the line is not empty, display the customers and their items
-        if (line.length > 0) {
+        if (line.length > 0 ) {
             line.forEach(task => {
                 lineList.innerHTML += `<p><strong>(Customer Name:</strong> ${task.customer},---<strong> Number of Items:</strong> ${task.items})</p>`;
-                
             });
         } else {
             lineList.innerHTML += `<p>No customers in this line yet.</p>`;
@@ -85,7 +84,7 @@ function randomizeCheckoutLines() {
                 line.push(generateRandomCustomer()); // Add random customer to the line
             }
         }else if (line.length <= 5) {
-            const targetCustomers = Math.floor(Math.random() * 4) + 1; // Random target between 1 and 4
+            const targetCustomers = Math.floor(Math.random() * 5) + 1; // Random target between 1 and 5
             const numCustomersToRemove = line.length - targetCustomers; // Calculate how many to remove
             for (let i = 0; i < numCustomersToRemove; i++) {
                 line.pop(); // Remove one customer at a time
